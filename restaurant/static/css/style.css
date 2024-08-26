@@ -1,0 +1,133 @@
+li {
+    list-style: none;
+}
+
+#nav-text { 
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.morocco {
+    color: white;
+}
+
+.text-h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 6.4rem;
+    color: #f7d217;
+}
+
+.text-p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    border-radius: .5rem;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.img-section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img-home {
+    max-width: 25rem;
+    border-radius: 30px;
+    height: 325px;
+
+}
+
+.section-text {
+    gap: 3rem;
+    max-width: 50rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background-color: #495e57;
+    align-items: center;
+    height: 50vh;
+}
+
+#menu-card {
+    background-color: #d5d7d6;
+}
+
+#menu-price {
+    color: #ee9972;
+}
+
+.order-text {
+    color: #ee9972;
+    text-decoration: none;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+
+.text-cards {
+    padding: 60px;
+    color: #495e57;
+}
+
+#menu-btn {
+    margin-left: 190px;
+}
+
+
+#menu-btn:hover {
+    color: #edefee;
+    background-color: #f4ce14;
+}
+
+
+
+#footer-text { 
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin: 20px;
+}
+
+#footer-text:hover { 
+    color: #f4ce14;
+}
+
+.footer-img {
+    padding: 20px;
+    font-size: 10rem;
+}
+
+.copyright{
+    font-size: 1.6rem;
+    grid-column: 1 / -1;
+}
+
+#text-copyright {
+    margin-bottom: 1rem;
+}
+
+.form {
+    justify-content: center;
+}

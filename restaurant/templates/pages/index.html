@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="section">
+        <div class="section-text">
+            <div class="text-h1">
+                <h1><b>Little Lemon</b></h1>
+            </div>
+            <div class="text-p">
+                <p >We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+            </div>
+            <div class="button">
+                <a href="{% url 'reserve' %}" class="btn btn-outline-warning btn-lg "><b>Reserve A Table</b></a>
+            </div>
+        </div>
+        <div class="img-section">
+            <img src="{% static 'img/head_chef.jpg' %}" class="img-home" alt="">
+        </div>
+    </div>
+    <div class="w3-container">
+        <div class="row justify-content-between p-15" style="padding: 50px;">
+            <div class="d-flex align-items-center justify-content-center br-50">
+                <h2 class="text-cards mr-3"><b>This Week's Specials !</b></h2>
+                <a href="{% url 'menu' %}" id="menu-btn" class="btn btn-warning btn-lg">Menu</a>
+            </div>
+                {% for menu in menus %}
+                    <div id="menu-card" class="w3-card-4" style=" width: 30rem;;">
+                        <img src="{{ menu.img.url }}" style="width: 100%; border-radius: 15px" alt="">
+                        <div id="menu-text" class="w3-container w3-center d-flex justify-content-between">
+                            <h2><b>{{ menu.title }}</b></h2>
+                            <h2 id="menu-price"><b>${{ menu.price }}</b></h2>
+                        </div>
+                        <div class="w3-container w3-center lead">
+                            <p class="lead">{{ menu.description|linebreaks }}.</p>
+                        </div>
+                        <div class="d-inline-block d-flex justify-content-center">
+                            <a href="" class="order-text"><h2>Order a Delivery</h2></a>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+        {% endblock content %}
+        

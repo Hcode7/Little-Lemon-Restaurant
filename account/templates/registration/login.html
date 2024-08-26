@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <br>
+    <form action="" class="form-inline" method="post">
+        {% csrf_token %}
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="">
+                    <h1 class="d-flex justify-content-center">Login Form</h1>
+                    <br>
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                    <br>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                    <br>
+                    <button type="submit" class="btn btn-success">Login</button>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+    <br>
+{% endblock content %}

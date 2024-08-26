@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}  Menu {% endblock title %}
+
+{% block content %}
+<style>
+    .italianno-regular {
+        font-family: "Italianno", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+    a {
+        text-decoration: none;
+    }
+</style>
+    <div class="container">
+
+        <h1 class="italianno-regular" style="margin: 15px;">Menu</h1>
+        <hr>
+        {% for menu in menus %}
+        <div id="menu-content" class="d-flex justify-content-between p-15">
+            <a href="{% url 'menu_detail' menu.slug menu.id %}">
+                <h3 style="color: #ee9972;"><b>{{ menu.title }}</b></h3>
+            </a>
+            <h3 style="color: #ee9972;"><b>${{ menu.price }}</b></h3>
+        </div>
+            <p>{{ menu.description|truncatewords:10 }}</p>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
